@@ -1,38 +1,41 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin'),
-      UglifyJSPlugin = require('uglifyjs-webpack-plugin'),
-      ExtractTextPlugin = require("extract-text-webpack-plugin"),
-      path = require("path");
+var config = {
+  entry: './main.js',
 
-module.exports = {
-  "entry": ["./src/index.js"],
-  "output": {
-    "path": "output",
-    "filename": "[name]-[chunkhash].js",
-    "libraryTarget": "umd"
+  output: {
+    path: './',
+    filename: 'index.js'
   },
-  "module": {
-    rules: [
+
+  devServer: {
+    inline: true,
+    port: 7777
+  },
+
+  module: {
+    loaders: [
       {
-        "exclude": "/node_modules/",
-        "include": "./src/",
-        "loader": "babel-loader",
-        "options": {
-          "presets": ["es2015", "react"]
-        },
-        "test": /\.jsx?$/
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: {
+          presets: ['es2015', 'react']
+        }
       },
       {
-        "exclude": "/node_modules/",
-        "use": ExtractTextPlugin.extract({
-          "fallbackLoader": "style-loader",
-          "loader": ["css-loader", "sass-loader"]
-        }),
-        "test": /\.scss$/
+        test: /\.css$/,
+        include: /app/,
+        loaders: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.css$/,
+        exclude: /app/,
+        loader: 'style!css'
       }
     ]
-  },
-  plugins: [
-    new HtmlWebpackPlugin(),
-    new ExtractTextPlugin("[name]-[contenthash].css")
-  ]
+  }
 }
+
+module.exports = config;

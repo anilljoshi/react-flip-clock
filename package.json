@@ -1,8 +1,8 @@
 {
   "name": "react-flip-clocks",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "react flip clock ",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
     "prod": "--prod",
@@ -10,6 +10,22 @@
     "serve": "webpack-dev-server --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "anil joshi webdesigneraniljoshi@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anilljoshi/react-flip-clock.git"
+  },
+  "keywords": [
+    "reactjs",
+    "flipclock",
+    "react-flip-clock",
+    "react"
+  ],
+  "bugs": {
+    "url": "https://github.com/anilljoshi/react-flip-clock/issues"
+  },
+  "homepage": "https://github.com/anilljoshi/react-flip-clock#readme",
+  "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
@@ -25,21 +41,5 @@
     "style-loader": "^0.13.1",
     "uglifyjs-webpack-plugin": "^0.1.2",
     "webpack": "^2.2.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anilljoshi/react-flip-clock.git"
-  },
-  "keywords": [
-    "reactjs",
-    "flipclock",
-    "react-flip-clock",
-    "react"
-  ],
-  "author": "anil joshi webdesigneraniljoshi@gmail.com",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/anilljoshi/react-flip-clock/issues"
-  },
-  "homepage": "https://github.com/anilljoshi/react-flip-clock#readme"
+  }
 }

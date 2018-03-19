@@ -1,2 +1,3 @@
-# react-flip-clock
-react flip clock
+# react-flip-clocks
+---
+Simple, Easy, lightweight component for react apps
