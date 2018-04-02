@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './style.css';
-import styles from './style.css'
 import { isEmpty } from "./js/";
 
 
@@ -21,6 +20,8 @@ class FlipClock extends React.Component {
 		};
 	}
 	componentDidMount() {
+		console.clear();
+		console.log('this.props',this.props)
 		this.timerID = setInterval(
 			() => this.updateTime(),
 			59
